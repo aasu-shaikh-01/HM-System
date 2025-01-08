@@ -13,7 +13,7 @@ import {
   isAdminAuthenticated,
   isPatientAuthenticated,
 } from "../middlwares/auth.js";
-const router = express();
+const router = express.Router();
 
 router.post("/patient/register", patientRegister);
 router.post("/login", login);

@@ -80,7 +80,6 @@
 // export const Appointment = mongoose.model("Appointment", appointmentSchema);
 
 import mongoose from "mongoose";
-// import { Mongoose } from "mongoose";
 import validator from "validator";
 
 const appointmentSchema = new mongoose.Schema({
@@ -102,8 +101,8 @@ const appointmentSchema = new mongoose.Schema({
   phone: {
     type: String,
     required: [true, "Phone Is Required!"],
-    // minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
-    // maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
+    minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
+    maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
   },
   nic: {
     type: String,

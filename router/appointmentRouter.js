@@ -9,7 +9,7 @@ import {
   isAdminAuthenticated,
   isPatientAuthenticated,
 } from "../middlwares/auth.js";
-const router = express();
+const router = express.Router();
 router.post("/post", isPatientAuthenticated, postAppointment);
 router.get("/getall", isAdminAuthenticated, getAllAppointments);
 router.put("/update/:id", isAdminAuthenticated, updateAppointmentStatus);
